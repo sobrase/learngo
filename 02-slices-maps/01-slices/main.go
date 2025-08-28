@@ -4,10 +4,34 @@ import (
 	"fmt"
 )
 
+func chessBoard() {
+	chessBoard := [][]string{
+		{ "♜", "♞", "♝", "♛", "♚", "♝", "♞", "♜"},
+		{ "♟", "♟", "♟", "♟", "♟", "♟", "♟", "♟"},
+		{ "♟", "♟", "♟", "♟", "♟", "♟ ", "♟", "♟"},
+		{ "♟", "♟", "♟", "j", "♟", "♟", "♟", "♟"},
+		{ "♟", "♟", "♟", "♟", "♟", "♟", "♟", "♟"},
+		{ "♙", "♙", "♙", "♙", "♙", "♙", "♙", "♙"},
+		{ "♖", "♘", "♗", "♕", "♔", "♗", "♘", "♖"},
+		
+}
+fmt.Println("  a   b   c   d   e   f   g   h ")
+for n,_ := range chessBoard {
+	fmt.Printf("%d ",n)
+	for _,j := range chessBoard[n]{
+
+			fmt.Printf("│ %-3s ",j)
+	
+	}
+	fmt.Printf("| %3d \n",n)
+}
+fmt.Println("  a   b   c   d   e   f   g   h ")
+}
+
 func main() {
 	fmt.Println("Exercise 3: Game Board Generator & Visualizer")
 	fmt.Println("============================================")
-
+chessBoard()
 	// TODO: Task 1 - Create chess board generator
 	// Create a function that generates an 8x8 chess board:
 	// - Initialize board with pieces in starting positions
